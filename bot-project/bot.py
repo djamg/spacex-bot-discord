@@ -31,19 +31,19 @@ async def nine_nine(ctx):
 
 @bot.command(name='launch')
 async def nine_nine(ctx):
-    embed = discord.Embed()
+    embed = discord.Embed(
+        title="SpaceX Goes Brrrrrr!!!!!"
+    )
     embed.set_image(
-        url='https://i.redd.it/stupay34mc151.png')
-
+        url=launch_image())
     await ctx.send(embed=embed)
-    await ctx.send(launch())
 
 
 @bot.command(name='image')
 async def displayemded(ctx):
     embed = discord.Embed()
     embed.set_image(
-        url=image())
+        url=random_gif())
 
     await ctx.send(embed=embed)
 
