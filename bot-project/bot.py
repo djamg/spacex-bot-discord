@@ -6,7 +6,6 @@ import random
 from spacexapi import *
 import time
 
-# dot_env
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
@@ -32,6 +31,11 @@ async def nine_nine(ctx):
 
 @bot.command(name='launch')
 async def nine_nine(ctx):
+    embed = discord.Embed()
+    embed.set_image(
+        url='https://i.redd.it/stupay34mc151.png')
+
+    await ctx.send(embed=embed)
     await ctx.send(launch())
 
 
