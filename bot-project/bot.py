@@ -6,6 +6,7 @@ import random
 from spacexapi import *
 import time
 
+# dot_env
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
