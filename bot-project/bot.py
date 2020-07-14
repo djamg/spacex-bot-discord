@@ -27,7 +27,6 @@ async def nine_nine(ctx):
 
     await ctx.send(embed=embed)
     await ctx.send(previous_launch())
-# d
 
 
 @bot.command(name='launch')
