@@ -1,4 +1,4 @@
-worker: python ./bot-project/bot.py
+worker:python ./bot-project/bot.py
 Pillow==7.2.0
 discord.py==1.3.4
 PyInstaller==3.6
