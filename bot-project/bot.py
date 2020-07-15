@@ -48,4 +48,12 @@ async def displayemded(ctx):
     await ctx.send(embed=embed)
 
 
+@bot.command(name='nasa')
+async def displayemded(ctx):
+    embed = discord.Embed()
+    embed.set_image(
+        url='https://www.youtube.com/watch?v=21X5lGlDOfg')
+
+    await ctx.send('https://www.youtube.com/watch?v=21X5lGlDOfg')
+
 bot.run(TOKEN)

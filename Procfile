@@ -1,0 +1,1 @@
+worker: python ./bot-project/bot.py
