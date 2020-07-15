@@ -56,4 +56,4 @@ async def displayemded(ctx):
 
     await ctx.send('https://www.youtube.com/watch?v=21X5lGlDOfg')
 
-bot.run(TOKEN)
+bot.run('NzMxNzk3Mzc3OTU4MDE5MDgy.Xw1dBQ.hFmjz1wCyp0QjgMMRVBBvJrePX0')
