@@ -14,12 +14,18 @@ TOKEN = os.getenv('DISCORD_TOKEN')
 bot = commands.Bot(command_prefix='sx ')
 
 
-@bot.command(name='next')
+@bot.event
+async def on_ready():
+    await bot.change_presence(status=discord.Status.online, activity=discord.Game("sx help. Connected to " + str(len(bot.guilds)) + " servers."))
+    print("Bot is Ready")
+
+
+@ bot.command(name='next')
 async def nine_nine(ctx):
     await ctx.send(next_launch())
 
 
-@bot.command(name='previous')
+@ bot.command(name='previous')
 async def nine_nine(ctx):
     embed = discord.Embed()
     embed.set_image(
@@ -29,7 +35,7 @@ async def nine_nine(ctx):
     await ctx.send(previous_launch())
 
 
-@bot.command(name='launch')
+@ bot.command(name='launch')
 async def nine_nine(ctx):
     embed = discord.Embed(
         title="SpaceX Goes Brrrrrr!!!!!"
@@ -39,7 +45,7 @@ async def nine_nine(ctx):
     await ctx.send(embed=embed)
 
 
-@bot.command(name='image')
+@ bot.command(name='image')
 async def displayemded(ctx):
     embed = discord.Embed()
     embed.set_image(
@@ -48,7 +54,7 @@ async def displayemded(ctx):
     await ctx.send(embed=embed)
 
 
-@bot.command(name='nasa')
+@ bot.command(name='nasa')
 async def displayemded(ctx):
     embed = discord.Embed()
     embed.set_image(
@@ -56,4 +62,18 @@ async def displayemded(ctx):
 
     await ctx.send('https://www.youtube.com/watch?v=21X5lGlDOfg')
 
-bot.run('NzMxNzk3Mzc3OTU4MDE5MDgy.Xw1dBQ.hFmjz1wCyp0QjgMMRVBBvJrePX0')
+
+@ bot.command(name='isro')
+async def displayemded(ctx):
+    embed = discord.Embed()
+    embed.set_image(
+        url=isro())
+
+    await ctx.send(embed=embed)
+
+
+@ bot.command(name='server')
+async def nine_nine(ctx):
+    await ctx.send("Deployed and running on " + str(len(bot.guilds)) + " servers.")
+
+bot.run(TOKEN)

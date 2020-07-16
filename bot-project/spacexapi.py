@@ -30,6 +30,8 @@ def launch():
 
 
 def image():
+    previous = requests.get('https://api.spacexdata.com/v4/launches/latest')
+    previous_dict = previous.json()
     image = previous_dict['links']['flickr']['original']
     random_sel = random.randint(0, len(image)-1)
     return(image[random_sel])
@@ -48,3 +50,14 @@ def random_gif():
     gif_response = requests.get(gif_url, gif_headers)
     gif_dict = gif_response.json()
     return(gif_dict['data']['images']['downsized']['url'])
+
+
+def isro():
+    isro_image_list = ['https://www.isro.gov.in/sites/default/files/galleries/GSLV-F10%20/%20GISAT-1%20Gallery/logu6770.jpg',
+                       'https://www.isro.gov.in/sites/default/files/galleries/GSLV-F10%20/%20GISAT-1%20Gallery/avp4964copy1.jpg',
+                       'https://www.isro.gov.in/sites/default/files/galleries/GSLV-F10%20/%20GISAT-1%20Gallery/avp4741copy.jpg',
+                       'https://www.isro.gov.in/sites/default/files/galleries/%E0%A4%9C%E0%A5%80.%E0%A4%8F%E0%A4%B8.%E0%A4%8F%E0%A4%B2.%E0%A4%B5%E0%A5%80.-%E0%A4%8F%E0%A4%AB10/%E0%A4%9C%E0%A5%80.%E0%A4%86%E0%A4%88.%E0%A4%B8%E0%A5%88%E0%A4%9F-1%20%E0%A4%A6%E0%A5%80%E0%A4%B0%E0%A5%8D%E0%A4%98%E0%A4%BE/007.jpg',
+                       'https://yehaindia.com/wp-content/uploads/2019/09/isro.jpg',
+                       'https://api.baliyans.com/apis/media/images/b7813c56-3b62-4542-a111-26dd6382ac8a_chandrayaan-2-7.jpg',
+                       ]
+    return(random.choice(isro_image_list))
