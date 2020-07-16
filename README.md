@@ -1,5 +1,5 @@
-<div align="center">#spacex-bot-discord 
-Unofficial SpaceX bot for Discord 
+#spacex-bot-discord 
+<div align="center">Unofficial SpaceX bot for Discord 
 
 <div align="center">
   <!-- Stability -->
