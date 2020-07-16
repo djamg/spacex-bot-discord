@@ -1,4 +1,4 @@
-#spacex-bot-discord 
+#spacex-bot-discord#
 Unofficial SpaceX bot for Discord 
 
 <div align="center">
