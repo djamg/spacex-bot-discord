@@ -1,5 +1,5 @@
 #spacex-bot-discord 
-<div align="center">Unofficial SpaceX bot for Discord 
+Unofficial SpaceX bot for Discord 
 
 <div align="center">
   <!-- Stability -->
@@ -9,5 +9,5 @@
  
 
 
-invite-link
+discord-invite-link
 https://discord.com/oauth2/authorize?client_id=731797377958019082&scope=bot&permissions=1208417344
